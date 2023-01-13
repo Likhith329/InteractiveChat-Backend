@@ -36,7 +36,7 @@ const server=app.listen(process.env.PORT,console.log('server started'))
 const io=require('socket.io')(server,{
     pingTimeout:60000,
     cors:{
-        origin:'http://localhost:3000'
+        origin:'https://interactive-one-on-one.netlify.app'
     }
 })
 
