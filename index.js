@@ -17,6 +17,8 @@ app.use(cors())
 
 const Authmodule=require('./Modules/Authmodule')
 
+
+
 app.use('/register',Registerrouter)// router for signup and signin
 
 app.use('/',Authmodule.authenticate)
@@ -24,12 +26,13 @@ app.use('/',Authmodule.authenticate)
 //the below one is authenticated from the above
 app.get('/register/signup',Registermodule.getusers)// retreiving the users after signup
 
-
 app.use('/chats',Chatrouter)
 
 app.use('/messages',Messagerouter)
 
 app.use('/users',Userrouter)
+
+
 
 const server=app.listen(process.env.PORT,console.log('server started'))
 
